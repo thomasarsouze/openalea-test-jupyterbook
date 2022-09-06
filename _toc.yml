@@ -7,6 +7,9 @@ chapters:
   - file: book/markdown
   - file: book/notebooks
   - file: book/bibliography
+  - file: book/plantgl_objects
+  - file: book/mtg_plantframe
+  - file: book/hydroshoot_grapevine
 
 # Or you organize the TOC by parts
 

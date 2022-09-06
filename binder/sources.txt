@@ -1,0 +1,3 @@
+https://github.com/openalea/deploy.git
+https://github.com/openalea-incubator/oawidgets.git
+https://github.com/openalea/strawberry.git

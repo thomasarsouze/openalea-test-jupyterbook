@@ -1,0 +1,23 @@
+set -ex
+
+export CONDA_ENV='openaleabook'
+export USER='openalea'
+
+/bin/bash -c ". activate ${CONDA_ENV}
+
+for p in `cat binder/sources.txt` 
+do 
+    git clone $p
+    cd `basename $p .git` 
+    ${NB_PYTHON_PREFIX}/bin/python setup.py install
+    cd ..
+done
+
+mkdir "./work/" && \
+mkdir "./work/dashboard_files" && \
+mkdir "./work/notebooks" && \
+mkdir "./work/application" && \
+cp strawberry/share/data/*.mtg •/work/dashboard_files && \
+cp strawberry/example/tutorials/*.ipynb ./work/notebooks && \
+cp strawberry/src/openalea/strawberry/application/* ./work/application && \
+rm -rf strawberry oawidgets deploy
